@@ -1,4 +1,4 @@
-import pygame
+import pygame # type: ignore
 from datetime import datetime
 
 pygame.init()

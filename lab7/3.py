@@ -1,11 +1,11 @@
-import pygame
+import pygame # type: ignore
 
 pygame.init()
 screen = pygame.display.set_mode((1200, 800))
 done = False
 blue1=True
-x=90
-y=90
+x=600
+y=400
 
 clok=pygame.time.Clock()
 a=1
@@ -27,6 +27,14 @@ while not done:
         if qimyl[pygame.K_DOWN]:y+=a
         if qimyl[pygame.K_RIGHT]:x+=a
         if qimyl[pygame.K_LEFT]:x-=a
+        if (x+40)>1200:
+                x=1200-40
+        if (x-40)<0:
+                x=0+40
+        if (y+40) >800:
+                y=800-40
+        if (y-40) <0:
+                y=0+40
 
         pygame.display.flip()
 
